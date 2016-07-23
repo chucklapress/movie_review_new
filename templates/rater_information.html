@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie rater information</title>
+</head>
+<body>
+  <h2>A page contain reviews </h2>
+    <p>Please enter a rater id number</p>
+
+    {% for rater in rater  %}
+        {{ rater.id }}
+        {{rater.age}}
+        {{rater.occupation}}
+        {{ rater.gender }}
+        {% endfor %}
+
+        {{ rater.id }}
+
+</body>
+</html>
