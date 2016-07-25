@@ -53,4 +53,4 @@ class Average(models.Model):
         average = models.FloatField()
 
         def __str__(self):
-            return self.movie_title
+            return self.movie.movie_title

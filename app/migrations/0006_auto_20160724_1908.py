@@ -27,7 +27,7 @@ def top_twenty(apps, schema_editor):
                 number_ratings=total
                 )
 
-    raise Exception("its good")
+    
 
 
 

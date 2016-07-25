@@ -10,11 +10,11 @@ def datareview(apps, schema_editor):
     Rater = apps.get_model('app', 'Rater')
     Movie = apps.get_model('app', 'Movie')
     Review = apps.get_model('app', 'Review')
-    with open('/Users/chucklapress/tiy-projects/movieReview_new/u.data', 'r') as inFile:
+    with open('/Users/chucklapress/tiy-projects/movieReview_new/movie_review_new/u.data', 'r') as inFile:
         data = csv.reader(inFile, delimiter='\t')
         for row in data:
             temp_rater = Rater.objects.get(id=row[0])
-            temp_movie = Movie.objects.get(id=row[0])
+            temp_movie = Movie.objects.get(id=row[1])
             Review.objects.create(rater=temp_rater, movie=temp_movie, rating=row[2], timestamp=row[3])
 
 

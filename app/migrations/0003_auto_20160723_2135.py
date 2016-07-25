@@ -7,7 +7,7 @@ import csv
 
 def datamovie(apps,schema_editor):
     Movie = apps.get_model('app','Movie')
-    with open('/Users/chucklapress/tiy-projects/movieReview_new/u.item',encoding='latin1') as inFile:
+    with open('/Users/chucklapress/tiy-projects/movieReview_new/movie_review_new/u.item',encoding='latin1') as inFile:
         data = csv.reader(inFile, delimiter='|')
         for row in data:
             Movie.objects.create(

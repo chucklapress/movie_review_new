@@ -8,7 +8,7 @@ import csv
 
 def datarater(apps,schema_editor):
     Rater = apps.get_model('app','Rater')
-    with open('/Users/chucklapress/tiy-projects/movieReview_new/u.user', 'r') as infile:
+    with open('/Users/chucklapress/tiy-projects/movieReview_new/movie_review_new/u.user', 'r') as infile:
         data = csv.reader(infile, delimiter='|')
         for row in data:
             Rater.objects.create(id=row[0], age=row[1], gender=row[2], occupation=row[3], zipcode=row[4])
