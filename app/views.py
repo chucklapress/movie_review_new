@@ -25,6 +25,7 @@ def single_view(request,id):
     return render(request, "single_movie.html", context)
 
 def rater_info(request):
+
     context = {
         "rater": Rater.objects.all(),
 
