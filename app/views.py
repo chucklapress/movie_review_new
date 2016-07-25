@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Count, Avg
-from app.models import Rater, Movie, Review
+from app.models import Rater, Movie, Review, Average
 
 
 # Create your views here.
@@ -34,11 +34,13 @@ def rater_info(request):
 def movie_rating_view(request):
 
     context = {
-        "rated": Review.objects.filter(rating=1)
+        "rated": Average.objects.filter(average=5)
 
     }
     return render(request, "movie_rated.html", context)
 
-def rated_rating(request):
-
-    pass
+def average_rating(request):
+    context = {
+    "top_twenty": Average.objects.order_by('-number_ratings')[:20]
+    }
+    return render(request, "top_twenty.html", context)
