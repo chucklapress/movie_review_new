@@ -6,16 +6,17 @@
 </head>
 <body>
   <h2>A page contain reviews </h2>
-    <p>Please enter a rater id number</p>
+    
 
     {% for rater in rater  %}
-        {{ rater.id }}
-        {{rater.age}}
-        {{rater.occupation}}
-        {{ rater.gender }}
+        <ol>
+          {{ rater.id }}
+          {{rating}}
+        </ol>
+
         {% endfor %}
 
-        {{ rater.id }}
+
 
 </body>
 </html>
