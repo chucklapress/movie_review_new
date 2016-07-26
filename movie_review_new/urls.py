@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^rated/$', views.movie_rating_view),
     url(r'^single/(?P<id>\w+)/$', views.single_view),
     url(r'^raters/$', views.rater_info),
+    url(r'^singlerate/(?P<id>\w+)/$',views.single_rater),
     url(r'^top_twenty/$', views.average_rating)
 
 ]

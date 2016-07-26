@@ -24,14 +24,23 @@ def single_view(request,id):
     }
     return render(request, "single_movie.html", context)
 
+
+def single_rater(request,id):
+    context = {
+    "single_rater": Rater.objects.get(id=id)
+    }
+    return render(request, "single_rater.html",context)
+
+
 def rater_info(request):
 
     context = {
-        "rater": Review.objects.order_by('rater')[:5],
-        "rating": Average.objects.order_by('-number_ratings')[:1]
+        "rater": Rater.objects.all()
+
 
     }
     return render(request, "rater_information.html",context)
+
 
 def movie_rating_view(request):
 
@@ -40,6 +49,7 @@ def movie_rating_view(request):
 
     }
     return render(request, "movie_rated.html", context)
+    
 
 def average_rating(request):
     context = {

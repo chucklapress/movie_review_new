@@ -7,8 +7,10 @@
 {% for rater in rater  %}
 
 <ol>
-  {{ rater.id }}
-  {{rating}}
+  <h5>Id:{{ rater.id }}</h5>
+  <h4>Age: {{rater.age}}</h4>
+  <h4>Occupation:{{rater.occupation}}</h4>
+  <h4>Zipcode:{{rater.zipcode}}</h4>
 </ol>
   {% endfor %}
 {% endblock %}
