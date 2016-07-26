@@ -27,8 +27,8 @@ def single_view(request,id):
 def rater_info(request):
 
     context = {
-        "rater": Rater.objects.order_by('id')[:5],
-        "rating": Review.objects.order_by('movie')[:1]
+        "rater": Review.objects.order_by('rater')[:5],
+        "rating": Average.objects.order_by('-number_ratings')[:1]
 
     }
     return render(request, "rater_information.html",context)
