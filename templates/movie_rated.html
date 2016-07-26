@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Movie rated</title>
-  </head>
-  <body>
-      <h3>Five star rated movies</h3>
-    {% for movie in rated  %}
-        <ol>
-          {{ movie.rating }}
-          {{movie.movie.movie_title}}
-        </ol>
+{% extends "base.html" %}
 
-        {% endfor %}
 
-  </body>
-</html>
+
+{% block content %}
+<h3>Five star rated movies</h3>
+  {% for movie in rated  %}
+    <ol>
+      {{ movie.rating }}
+      {{movie.movie.movie_title}}
+      <a href="/single/{{movie.pk}}">Movie Details</a>
+    </ol>
+
+    {% endfor %}
+
+{% endblock %}

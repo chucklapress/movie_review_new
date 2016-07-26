@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Top Twenty Movies</title>
-  </head>
-  <body>
+
+{% extends "base.html" %}
+
+{% block content  %}
+
     <h3>Top Twenty Movies</h3>
     {% for movie in top_twenty  %}
       <ol>
-        <h4>{{movie}}</h4>
+        <h2>Title: {{movie}}</h2>
+        <h4>movie release date: {{movie.movie.release_date}}</h4>
+        <h4>IMDb url:{{movie.movie.IMBd_URL}}</h4>
+        <a href="/single/{{movie.pk}}">Movie Details</a>
       </ol>
     {% endfor %}
-
-
-
-
-  </body>
-</html>
+{% endblock %}

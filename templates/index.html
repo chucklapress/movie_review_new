@@ -1,24 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome to moviereview app</title>
-</head>
-<body>
+{% extends "base.html" %}
 
 
-<div class="container">
 
-<a href="/movie/">List of Movies</a>
-<a href="/rated/">Five Star Reviewed</a>
-<a href="/single/">Single View add number</a>
-<a href="/raters/">Rater info add number</a>
-<a href="/top_twenty/">Top Twenty rated movies</a>
 
-</div>
 
-    <h1>Welcome to the movie review app</h1>
-    <h3>Please go through and review the content</h3>
 
-</body>
-</html>
+{% block content  %}
+<h1>Welcome to the movie review app</h1>
+<h3>Please go through and review the content</h3>
+
+{% endblock %}

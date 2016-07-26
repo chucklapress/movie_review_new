@@ -1,22 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Movie rater information</title>
-</head>
-<body>
-  <h2>A page contain reviews </h2>
+{% extends "base.html" %}
+
+{% block content %}
 
 
-    {% for rater in rater  %}
-         <ol>  
-        {{ rater.id }}
-        {{rating}}
-        </ol>
+<h2>raters with the most reviews </h2>
+{% for rater in rater  %}
 
-        {% endfor %}
-
-
-
-</body>
-</html>
+<ol>
+  {{ rater.id }}
+  {{rating}}
+</ol>
+  {% endfor %}
+{% endblock %}
