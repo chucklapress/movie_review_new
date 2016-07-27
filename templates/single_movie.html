@@ -16,7 +16,7 @@
 {% for reviewer in single.review_set.all %}
   <div class="">
     {{ reviewer.rater }} | {{ reviewer.rating }}
-    <a href="/singlerate/{{reviewer.id}}">Rater Details</a>
+    <a href="/singlerate/{{reviewer.rater.id}}">Rater Details</a>
   </div>
 {% endfor %}
 </body>
