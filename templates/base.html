@@ -1,20 +1,28 @@
-
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class="container">
-
-    <a href="/movie/">List of Movies</a>
-    <a href="/rated/">Five Star Reviewed</a>
-    <a href="/top_twenty/">Top Twenty rated movies</a>
+    <title>Movie Reviews</title>
+    <link rel = "stylesheet" href ={% static "app/css/bootstrap.css"%}>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+      <ul class="nav nav-pills">
+      <li role="presentation"><a href="/movie/">List of Movies</a></li>
+      <li role="presentation"><a href="/rated/">Five Star Reviewed</a></li>
+      <li role="presentation"><a href="/top_twenty/">Top Twenty rated movies</a></li>
     </div>
-      <br>{% block content %}
-          {% endblock %}
-      <br>
+  </nav>
+  </head>
 
-  </body>
+  <body>
+      <br>
+      <br>
+      {% block content %}
+        {% endblock %}
+      <br>
+    </body>
+
+
+
 </html>

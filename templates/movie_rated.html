@@ -3,15 +3,17 @@
 
 
 {% block content %}
+<div class="container">
+
+
 <h3>Five star rated movies</h3>
   {% for movie in rated  %}
     <ol>
-      {{ movie.rating }}
-      {{movie.movie.movie_title}}
+      <h5>Movie ID#:{{ movie.pk }}</h5>
+      <h4>Movie Title:{{movie.movie.movie_title}}</h4>
       <a href="/single/{{movie.pk}}">Movie Details</a>
-
     </ol>
-
     {% endfor %}
+</div>
 
 {% endblock %}

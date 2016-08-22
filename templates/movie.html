@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<div class="container">
+  
 <h2>Listing of the movies reviewed on our site</h2>
   {% for movie in movies %}
     <h5>{{movie.id}}</h5>
@@ -12,4 +14,5 @@
 
     <a href="/single/{{movie.pk}}">Movie Details</a>
             {% endfor %}
+</div>
 {% endblock %}

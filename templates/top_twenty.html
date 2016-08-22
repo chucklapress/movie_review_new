@@ -2,20 +2,19 @@
 {% extends "base.html" %}
 
 {% block content  %}
+<div class="container">
+
 
 <h3>Top Twenty Movies</h3>
 {% for movie in top_twenty  %}
 <ol>
-  <h2>Title: {{movie}}</h2>
-  <h4>movie release date: {{movie.movie.release_date}}</h4>
-  <h4>IMDb url:{{movie.movie.IMBd_URL}}</h4>
+  <h3>Title: {{movie}}</h3>
+  <h5>movie release date: {{movie.movie.release_date}}</h5>
+  <h5>IMDb url:{{movie.movie.IMBd_URL}}</h5>
   <a href="/single/{{movie.pk}}">Movie Details</a>
-  <h4>Average rating: {{movie.average}}</h4>
-  <h4>Number of rating: {{movie.number_ratings}}</h4>
-
-
-
+  <h5>Average rating: {{movie.average}}</h5>
+  <h5>Number of rating: {{movie.number_ratings}}</h5>
 </ol>
     {% endfor %}
+</div>
 {% endblock %}
-Contact GitHub API Training Shop Blog About
