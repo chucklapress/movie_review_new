@@ -1,13 +1,17 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content  %}
 <div class="container">
   <br>
-  <h3>Welcome to the Movie review listings</h3>
-  <h5>Please go through and review the content</h5>
-
-
+    <br>
+      <h3>Welcome to the movie review listings</h3>
+        <br>
+        <h5>Please go through and review the content</h5>
+      <br>
+    <br>
+<br>
+<br>
+<img src="{% static 'img/movies.jpg' %}" alt="" style="width:400px;height:350px;"/>
 </div>
-
-
 {% endblock %}

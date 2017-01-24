@@ -2,6 +2,8 @@
 
 {% block content %}
 
+<div class="container">
+
 
 <h2>raters with the most reviews </h2>
 {% for rater in rater  %}
@@ -14,4 +16,5 @@
   <h4>Zipcode:{{rater.zipcode}}</h4>
 </ol>
   {% endfor %}
+</div>
 {% endblock %}

@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Single view</title>
-</head>
-<body
+{% extends "base.html" %}
 
-<p> movie id number: {{single.id}}</p>
+{% block content %}
+
+<div class="container">
+<br>
+<p>movie id number: {{single.id}}</p>
 <h3>{{ single.movie_title}}</h3>
 <h5>{{single.release_date}}</h5>
 <h5>{{single.video_release_date}}</h5>
@@ -20,5 +18,5 @@
     <a href="/singlerate/{{reviewer.rater.id}}">Rater Details</a>
   </div>
 {% endfor %}
-</body>
-</html>
+</div>
+{% endblock %}
