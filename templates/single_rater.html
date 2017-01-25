@@ -1,15 +1,18 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content %}
 
 <div class="container">
-  
+  <br>
+  <br>
     <ol>
       <h5>Id:{{ single_rater.id }}</h5>
       <h4>Age: {{single_rater.age}}</h4>
       <h4>Occupation:{{single_rater.occupation}}</h4>
       <h4>Zipcode:{{single_rater.zipcode}}</h4>
-
+      <br>
+      <img src="{% static 'img/reviewer.jpg' %}" alt="" style="width:280px;height:280px;"/>
     </ol>
 </div>
 {% endblock %}
